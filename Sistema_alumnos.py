@@ -3,7 +3,7 @@ import tkinter as tk
 lista_alumnos={}
 turnos=["Mañana","Tarde","Noche","noche","mañana","tarde"]
 
-def consulta_lista()://Funcion para el boton de consulta de alumnos por lista
+def consulta_lista():#Funcion para el boton de consulta de alumnos por lista
     if lista_alumnos:
             print("----- Inicio de Listado -----\n")
             for nombre_alumno in lista_alumnos:
@@ -18,7 +18,7 @@ def consulta_lista()://Funcion para el boton de consulta de alumnos por lista
         et_con_datos=tk.Label(ventana_error1,text=" -- No hay alumnos ingresados -- ")
         et_con_datos.place(x=25, y=35)
             
-def agregar()://Funcion para el alta de un alumno nuevo
+def agregar():#Funcion para el alta de un alumno nuevo
         nombre_alumno=caja_nombre.get()
         cant_cursos=caja_cursos.get() 
         turno_alumno=caja_turno.get()
@@ -60,7 +60,7 @@ def agregar()://Funcion para el alta de un alumno nuevo
             lista_alumnos[nombre_alumno]=[cant_cursos,turno_alumno]
             print("\nNombre ingresado correctamente!\n")
 
-def consulta_cursos()://Funcion para el boton de consulta de cursos
+def consulta_cursos():#Funcion para el boton de consulta de cursos
     alumno_consulta=caja_ver_gral.get()
     if alumno_consulta.isalpha()==False:
         ventana_error6=tk.Toplevel(ventana)
@@ -73,7 +73,7 @@ def consulta_cursos()://Funcion para el boton de consulta de cursos
     else:
         print("Nombre: "+ alumno_consulta + " -- "+ "Cantidad de Cursos: "+ str(lista_alumnos[alumno_consulta][0]))            
             
-def consulta_turnos()://Funcion para el boton de consulta turnos
+def consulta_turnos():#Funcion para el boton de consulta turnos
     alumno_consulta=caja_ver_gral.get()
     if alumno_consulta.isalpha()==False:
         ventana_error7=tk.Toplevel(ventana)
